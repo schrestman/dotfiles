@@ -1,6 +1,4 @@
 export TERM="xterm-256color"
-alias net='mosh n5krc.duckdns.org'
-alias home='sudo openvpn /etc/openvpn/client/ccllc.ovpn'
 
 # =============================================================================
 #                                   Functions
