@@ -1,7 +1,19 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+syntax enable
+set number
+set ts=4
+set autoindent
+set expandtab
+set shiftwidth=4
+set cursorline
+set showmatch
+let python_highlight_all=1
+
 let g:powerline_pycmd = 'py3'
 set laststatus=2
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

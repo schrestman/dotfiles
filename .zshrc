@@ -307,6 +307,7 @@ if which nvim &>/dev/null; then
 else
 	alias vim='() { $(whence -p vim) $@ }'
 fi
+alias vi=vim
 
 # Generic command adaptations.
 alias grep='() { $(whence -p grep) --color=auto $@ }'
