@@ -9,6 +9,7 @@ set expandtab
 set shiftwidth=4
 set cursorline
 set showmatch
+set mouse=a
 let python_highlight_all=1
 
 let g:powerline_pycmd = 'py3'
