@@ -1,2 +1,8 @@
 vim/.netrwhist
-
+vim/autoload/
+vim/bundle
+vim/plugged
+vim/undodir
+*.bak
+.zshrc.local
+.gitignore

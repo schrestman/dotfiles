@@ -127,3 +127,5 @@ alias tpers='task context personal'
 # Show task I completed in the last week
 alias tclw='task end.after:today-1wk completed'
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

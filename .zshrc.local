@@ -24,8 +24,12 @@ alias td='task done'
 alias tt='task modified:today completed'
 alias ty='task modified:yesterday completed'
 alias tey='task end.after:yesterday completed'
-alias twork='task context work'
-alias tpers='task context personal'
+alias twork='task context Work'
+alias tpers='task context Personal'
 # Show task I completed in the last week
 alias tclw='task end.after:today-1wk completed'
 
+if type rg &> /dev/null; then
+      export FZF_DEFAULT_COMMAND='rg --files'
+        export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
