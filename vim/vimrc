@@ -17,7 +17,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set colorcolumn=80
+"set colorcolumn=80
 let mapleader=" "
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -27,6 +27,8 @@ let python_highlight_all=1
 let g:powerline_pycmd = 'py3'
 set laststatus=2
 
+let g:airline_powerline_fonts = 1
+
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -35,6 +37,12 @@ nnoremap <leader>u :UndotreeToggle<CR>
 
 vnoremap <C-c> "+y
 map <C-v> "+p
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -77,5 +85,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
+" If not able to install powerline-vim, use vim-airline plugin instead
+"Plug 'vim-airline/vim-airline'
 call plug#end()
 
