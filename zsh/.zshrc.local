@@ -1,0 +1,34 @@
+neofetch
+
+alias n='vim $HOME/Documents/Personal/notes.txt'
+alias v='vim'
+
+# General TaskWarrior commands
+alias t='task'
+#alias tn='task next +READY'
+alias tn='task status:pending and project.not:Inbox project.not:Work.Waiting project.not:Work.Someday'
+alias tnu="task next urgency \> ${urgencyPrio}"
+alias ta='task add'
+alias tan='task annotate'
+alias tl='task log'
+alias tac='task active'
+alias tap='task add project:Personal'
+alias taw='task add project:Work'
+alias tu='task mod'
+alias ts='task sync'
+alias td='task done'
+
+# TaskWarrior reports
+# Tip: use `task timesheet` for a full report
+alias tt='task modified:today completed'
+alias ty='task modified:yesterday completed'
+alias tey='task end.after:yesterday completed'
+alias twork='task context Work'
+alias tpers='task context Personal'
+# Show task I completed in the last week
+alias tclw='task end.after:today-1wk completed'
+
+if type rg &> /dev/null; then
+      export FZF_DEFAULT_COMMAND='rg --files'
+        export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
