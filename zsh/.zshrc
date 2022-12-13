@@ -3,7 +3,7 @@
 export PATH=$HOME/.bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/schrestman/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,32 +100,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.zshrc.local
-
-alias vi='vim'
-
-# General TaskWarrior commands
-alias t='task'
-alias tn='task next +READY'
-alias tnu="task next urgency \> ${urgencyPrio}"
-alias ta='task add'
-alias tan='task annotate'
-alias tl='task log'
-alias tac='task active'
-alias tap='task add project:Personal'
-alias taw='task add project:Work'
-alias tu='task mod'
-alias ts='task sync'
-alias td='task done'
-
-# TaskWarrior reports
-# Tip: use `task timesheet` for a full report
-alias tt='task modified:today completed'
-alias ty='task modified:yesterday completed'
-alias tey='task end.after:yesterday completed'
-alias twork='task context work'
-alias tpers='task context personal'
-# Show task I completed in the last week
-alias tclw='task end.after:today-1wk completed'
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
