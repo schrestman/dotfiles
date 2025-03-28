@@ -17,6 +17,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set relativenumber
 "set colorcolumn=80
 let mapleader=" "
 
