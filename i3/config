@@ -33,7 +33,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 default_border pixel 2
 default_floating_border pixel 2
 
-gaps inner 10
+gaps inner 20
 gaps outer 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -173,8 +173,8 @@ assign [title="OBS.*Profile.*"] 10
 #exec --no-startup-id "/usr/bin/obs"
 
 # Scratchpad Windows
-for_window [title=".*Projector.*"] move scratchpad
-bindsym $mod+plus [title=".*Projector.*"] scratchpad show
+#for_window [title=".*Projector.*"] move scratchpad
+#bindsym $mod+plus [title=".*Projector.*"] scratchpad show
 
 bindsym $mod+c exec terminator -T i3config -e "vim /home/br0/.config/i3/config"
 for_window [title="i3config"] floating enable resize set 2024 786
