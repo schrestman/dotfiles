@@ -93,14 +93,12 @@ workspace $ws1 output $monitor1
 workspace $ws2 output $monitor1
 workspace $ws3 output $monitor1
 workspace $ws4 output $monitor1
-
-workspace $ws5 output $monitor2
-workspace $ws6 output $monitor2
-workspace $ws7 output $monitor2
-
-workspace $ws8 output $monitor3
+workspace $ws5 output $monitor1
+workspace $ws6 output $monitor1
+workspace $ws7 output $monitor1
+workspace $ws8 output $monitor2
 workspace $ws9 output $monitor3
-workspace $ws0 output $monitor3
+workspace $ws10 output $monitor1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -172,19 +170,22 @@ mode "resize" {
 assign [title="OBS.*Profile.*"] 10
 #exec --no-startup-id "/usr/bin/obs"
 
+assign [title=".*Chromium$"] 8
+exec --no-startup-id "/usr/bin/chromium"
+
 # Scratchpad Windows
 #for_window [title=".*Projector.*"] move scratchpad
 #bindsym $mod+plus [title=".*Projector.*"] scratchpad show
 
-bindsym $mod+c exec terminator -T i3config -e "vim /home/br0/.config/i3/config"
 for_window [title="i3config"] floating enable resize set 2024 786
 for_window [title="i3config"] move position center
 
 bindsym $mod+m [title="scratch"] scratchpad show
 for_window [title="scratch"] move scratchpad resize set 2024 786 move position center
-exec --no-startup-id terminator -T scratch
+exec --no-startup-id kitty -T scratch
 
 bindsym $mod+p [class="pavucontrol"] scratchpad show
 for_window [class="pavucontrol"] move scratchpad move position center
 exec --no-startup-id pavucontrol
 
+bindsym $mod+Shift+A exec firefox -P Anon --private-window
