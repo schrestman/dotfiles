@@ -118,7 +118,7 @@ workspace $ws6 output $monitor1
 workspace $ws7 output $monitor1
 workspace $ws8 output $monitor1
 workspace $ws9 output $monitor1
-workspace $ws10 output $monitor1
+workspace $ws10 output $monitor2
 workspace $ws11 output $monitor2
 workspace $ws12 output $monitor2
 workspace $ws13 output $monitor2
@@ -128,7 +128,7 @@ workspace $ws16 output $monitor2
 workspace $ws17 output $monitor2
 workspace $ws18 output $monitor2
 workspace $ws19 output $monitor2
-workspace $ws20 output $monitor2
+workspace $ws20 output $monitor3
 workspace $ws21 output $monitor3
 workspace $ws22 output $monitor3
 workspace $ws23 output $monitor3
@@ -150,7 +150,7 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+#bindsym $mod+0 workspace number $ws10
 
 bindsym Ctrl+$mod+1 workspace number $ws11
 bindsym Ctrl+$mod+2 workspace number $ws12
@@ -161,7 +161,7 @@ bindsym Ctrl+$mod+6 workspace number $ws16
 bindsym Ctrl+$mod+7 workspace number $ws17
 bindsym Ctrl+$mod+8 workspace number $ws18
 bindsym Ctrl+$mod+9 workspace number $ws19
-bindsym Ctrl+$mod+0 workspace number $ws20
+#bindsym Ctrl+$mod+0 workspace number $ws20
 
 bindsym Mod1+$mod+1 workspace number $ws21
 bindsym Mod1+$mod+2 workspace number $ws22
@@ -172,7 +172,7 @@ bindsym Mod1+$mod+6 workspace number $ws26
 bindsym Mod1+$mod+7 workspace number $ws27
 bindsym Mod1+$mod+8 workspace number $ws28
 bindsym Mod1+$mod+9 workspace number $ws29
-bindsym Mod1+$mod+0 workspace number $ws30
+#bindsym Mod1+$mod+0 workspace number $ws30
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
