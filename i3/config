@@ -251,7 +251,7 @@ mode "resize" {
 
 
 # Start OBS on workspace 10
-assign [title="OBS.*Profile.*"] 10
+assign [title="OBS.*Profile.*"] 9
 #exec --no-startup-id "/usr/bin/obs"
 
 assign [title=".*Chromium$"] 11
@@ -274,3 +274,6 @@ exec --no-startup-id pavucontrol
 
 bindsym $mod+Shift+A exec firefox -P Anon --private-window
 bindsym $mod+Shift+V floating enable, sticky enable, resize set 590 px 333 px, move window to position 3230 px 10 px
+
+bindsym $mod+Shift+O [class="obsidian"] scratchpad show
+for_window [class="obsidian"] move scratchpad move position center
